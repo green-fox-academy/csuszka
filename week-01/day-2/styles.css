@@ -1,0 +1,76 @@
+body{
+    background-image: url(assets/background.png);
+    font-family: Inconsolata, courier;
+    margin: 0;
+}
+.logo {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar {
+    background-color: #333333;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item a, .nav-item a:active, .nav-item a:visited{
+    display: inline-block;
+    padding: 5px 20px;
+    color: #ff0099;
+    text-transform: uppercase;
+}
+
+.nav-item a:hover{
+    background-color: #ff0099;
+    color: #333333;
+}
+
+.nav-links{
+    display: flex;
+    list-style-type: none;
+}
+
+section {
+    padding: 0 10%;
+}
+
+.maintitle{
+font-size: 40px;
+font-family: Bitter, courier;
+}
+
+.subtitle {
+    font-family: Bitter, courier;
+    color: #ff0099;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.separator{
+    text-align: center;
+}
+
+.wikititle{
+    font-family: Bitter, courier;
+    font-size: 30px;
+    text-align: center;
+}
+
+dt{
+    font-family: Bitter, courier;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+
+}
+
+dd{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
