@@ -42,6 +42,8 @@ console.log(checkh);
 let i1: number = 10;
 let i2: number = 3;
 let checki1: boolean = i2**3 > i1 && i1 > i2*i2;
+console.log(checki1);
 
 let j: number = 1521;
 let checkj: boolean = j%3 === 0 || j%5 === 0;
+console.log(checkj);
