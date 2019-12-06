@@ -27,7 +27,7 @@ console.log(e);
 
 let f1: number = 123;
 let f2: number = 345;
-let checkf1: boolean = f1-f2 > 0;
+let checkf1: boolean = f1 > f2;
 console.log(checkf1);
 
 let g1: number = 350;
