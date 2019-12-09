@@ -1,6 +1,6 @@
 'use strict';
 
-const lineCount3: number = 12;
+const lineCount3: number = 9;
 let changesDirectionAfter: number;
 
 if (lineCount3 % 2 > 0) {
