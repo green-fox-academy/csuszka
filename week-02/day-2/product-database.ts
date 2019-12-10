@@ -10,16 +10,58 @@ let productList
     'Chicken': 550
 }
 
-function productStatistics (products){
-// How much is the fish?
-console.log('The chase is better than the catch! The fish costs: ' + products['Fish']);
-// What is the most expensive product?
-
-// What is the average price?
-// How many products' price is below 300?
-// Is there anything we can buy for exactly 125?
-// What is the cheapest product?
-
+function productStatistics(products) {
+    // How much is the fish?
+    console.log('The chase is better than the catch! The fish costs: ' + products['Fish']);
+    // What is the most expensive product?
+    let mostExpensive = 0;
+    for (let item in products) {
+        if (products[item] > mostExpensive) {
+            mostExpensive = products[item];
+        }
+    }
+    for (let item in products) {
+        if (products[item] == mostExpensive) {
+            console.log('The most expensive item is ' + item);
+        }
+    }
+    console.log
+    // What is the average price?
+    let totalPrice = 0;
+    for (let item in products) {
+        totalPrice += products[item];
+    }
+    console.log('The average price is ' + Math.floor(totalPrice / Object.keys(products).length));
+    // How many products' price is below 300?
+    let below300 = 0;
+    for (let item in products) {
+        if (products[item] < 300) {
+            below300++;
+        }
+    }
+    console.log('There are ' + below300 + ' items for less than 300');
+    // Is there anything we can buy for exactly 125?
+    for (let item in products) {
+        if (products[item] === 125) {
+            console.log('There is an item you can buy for 125');
+            break;
+        } else {
+            console.log('There is no item you can buy for 125');
+            break;
+        }
+    }
+    // What is the cheapest product?
+    let cheapestItem = totalPrice;
+    for (let item in products) {
+        if (products[item] < cheapestItem) {
+            cheapestItem = products[item];
+        }
+    }
+    for (let item in products) {
+        if (products[item] == cheapestItem) {
+            console.log('The cheapest item is ' + item);
+        }
+    }
 }
 
 productStatistics(productList);
