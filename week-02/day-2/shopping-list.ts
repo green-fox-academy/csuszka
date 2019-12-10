@@ -1,17 +1,19 @@
+'use strict';
+
 let shoppingList: string[] = ['Eggs', 'milk', 'fish', 'apples', 'bread', 'chicken'];
 
-function isItThere (list: string [], item: string): void {
-    let checker: number = 0;
-    for ( let i: number = 0; i < list.length; i++){
-if (item == list [i]){
-    checker += 1;
-}
+function isItThere(list: string[], item: string): void {
+  let checker: number = 0;
+  for (let i: number = 0; i < list.length; i++) {
+    if (item == list[i]) {
+      checker += 1;
     }
-    if(checker != 0){
-        console.log('Already on the list');
-    } else{
-        console.log('Not on the list');
-    }
+  }
+  if (checker != 0) {
+    console.log('Already on the list');
+  } else {
+    console.log('Not on the list');
+  }
 
 }
 

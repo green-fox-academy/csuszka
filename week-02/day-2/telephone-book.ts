@@ -15,7 +15,7 @@ function lookUp(pbook, name, phone, exist): void {
         console.log('We have the phone number for ' + exist);
     } else {
         console.log('We don\'t have the phone number for ' + exist);
-    }
+    } 
 }
 
 lookUp(phonebook, 'John K. Miller', '307-687-2982', 'Chris E. Myers');

@@ -9,18 +9,14 @@ function subint(needle: number, haystack: number[]): number[] {
   for (let i: number = 0; i < haystack.length; i++) {
     /*evaluation of a given array element*/
     let divideThis: number = haystack[i];
-    for (divideThis; divideThis >=1; divideThis = divideThis) {
-      console.log(divideThis);
-
+    for (divideThis; divideThis >= 1; divideThis = divideThis) {
       if (divideThis % 10 === needle || Math.floor(divideThis / 10) === needle) {
-        result.push[i];
-        divideThis = Math.floor(divideThis / 10);
+        result.push(i);
+        break;
       } else {
         divideThis = Math.floor(divideThis / 10);
       }
-
     }
-    
   }
   return result;
 }
