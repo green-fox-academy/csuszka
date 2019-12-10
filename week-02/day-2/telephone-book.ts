@@ -10,7 +10,11 @@ let phonebook = {
 
 function lookUp(pbook, name, phone, exist): void {
     console.log('The number for ' + name + ' is ' + pbook[name]);
-    console.log('The owner of the number ' + phone + ' is ' + 'SPACEHOLDER');
+    for (let pro in pbook){
+        if(pbook[pro] === phone){
+        console.log('The owner of the number ' + phone + ' is ' + pro);}
+    }
+
     if (pbook.hasOwnProperty(exist)) {
         console.log('We have the phone number for ' + exist);
     } else {
