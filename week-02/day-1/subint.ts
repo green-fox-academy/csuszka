@@ -7,13 +7,20 @@ function subint(needle: number, haystack: number[]): number[] {
   let result: number[] = [];
   /* going through the input array*/
   for (let i: number = 0; i < haystack.length; i++) {
-  /*evaluation of given array element*/
-  let divideThis: number = haystack[i];
-    for (let divideThis = haystack[i]; divideThis > 1; divideThis = divideThis) {
-      if (divideThis % 10 === needle || divideThis / 10 === needle){
+    /*evaluation of a given array element*/
+    let divideThis: number = haystack[i];
+    for (divideThis; divideThis >=1; divideThis = divideThis) {
+      console.log(divideThis);
+
+      if (divideThis % 10 === needle || Math.floor(divideThis / 10) === needle) {
         result.push[i];
+        divideThis = Math.floor(divideThis / 10);
+      } else {
+        divideThis = Math.floor(divideThis / 10);
+      }
+
     }
-    divideThis = divideThis/10;
+    
   }
   return result;
 }
