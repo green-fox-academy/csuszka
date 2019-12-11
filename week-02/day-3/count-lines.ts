@@ -6,20 +6,16 @@ function counter(fileName: string) {
   try {
     let fileContent: string = fs.readFileSync(fileName, encoding);
     let lineCounter: number = 1;
-    
     for (let i = 0; i < fileContent.length; i++) {
       if (fileContent[i] === '\n') {
         lineCounter++;
       }
     }
     console.log(lineCounter);
-
   } catch (error) {
     console.log(0);
   }
 }
-
-
 
 counter('mytest.txt');
 
