@@ -29,7 +29,7 @@ function decrypter(fileName: string) {
   let decryptedContent: string = '';
   for (let j: number = 0; j < arrayOfLines.length; j++) {
     let decryptedLine: string = '';
-    for (let k: number = 0; k < arrayOfLines[j].length; k = k + 2) {
+    for (let k: number = arrayOfLines[j].length-1; k >= 0; k--) {
       decryptedLine = decryptedLine + arrayOfLines[j][k];
     }
     decryptedContent = decryptedContent + decryptedLine + '\r\n';
@@ -37,9 +37,4 @@ function decrypter(fileName: string) {
   console.log(decryptedContent);
 }
 
-decrypter('duplicated-chars.txt');
-
-
-
-
-// Create a method that decrypts duplicated-chars.txt
+decrypter('reversed-lines.txt');
