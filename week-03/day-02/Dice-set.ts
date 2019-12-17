@@ -29,6 +29,7 @@ class DiceSet {
       return this.dice[index];
     }
   }
+
   getCurrentArray(): number[] {
     for (let i = 0; i < this.numOfDices; i++) {
       return this.dice;
@@ -44,7 +45,7 @@ class DiceSet {
 
 let diceSet = new DiceSet();
 let baseCase = diceSet.roll();
-console.log(diceSet.getCurrentArray);
+console.log(diceSet.getCurrentArray());
 
 while (!(diceSet.getCurrentArray().every((currentValue) => currentValue == 6))) {
   let currentSet = diceSet.getCurrentArray();
@@ -55,21 +56,3 @@ while (!(diceSet.getCurrentArray().every((currentValue) => currentValue == 6))) 
   }
   console.log(diceSet.getCurrentArray());
 }
-
-
-
-// console.log("------------------");
-
-// diceSet.reroll();
-// console.log(diceSet.getCurrent());
-
-// console.log("------------------");
-
-// console.log(diceSet.getCurrent(5));
-// diceSet.reroll();
-// console.log(diceSet.getCurrent());
-
-// console.log("------------------");
-
-// diceSet.reroll(4);
-// console.log(diceSet.getCurrent());
