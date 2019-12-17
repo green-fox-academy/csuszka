@@ -14,8 +14,6 @@ function purpleSteps(patternNumber: number, fillColor: string, strokeColor: stri
 
     ctx.strokeStyle = strokeColor;
     ctx.strokeRect(coordinate, coordinate, patternNumber * (i + 1), patternNumber * (i + 1));
-
-
   }
 }
 
