@@ -4,11 +4,13 @@ class Pirate {
   rumCounter: number = 0;
   parrotCounter: number = 0;
   alive: boolean = true;
+  passedOut: boolean = false;
+  state:string;
 
   drinksomeRum() {
     this.rumCounter++;
   }
-  
+
   howsItGoingMate() {
     if (this.alive) {
       if (0 <= this.rumCounter && this.rumCounter <= 4) {
@@ -19,6 +21,13 @@ class Pirate {
     } else {
       console.log('He\'s dead :(');
     }
+  }
+  addParrot(){
+    this.parrotCounter++;
+  }
+
+  stealParrot(){
+    this.parrotCounter--;
   }
 
   die() {
@@ -36,7 +45,9 @@ class Pirate {
           else if (1 / 3 < fate && fate <= 2 / 3) {
             this.die();
           } else {
-            console.log('Oh. They both passed out.')
+            this.passedOut=true;
+            matey.passedOut=true;
+            console.log('Oh. They both passed out. I wonder if they still need their loot.')
           }
         } else {
           console.log('No time to waste on this one, he\'s dead');
@@ -44,6 +55,17 @@ class Pirate {
       }
     } else {
       console.log('He\'s dead :(');
+    }
+  }
+  getState(){
+    if(this.alive){
+      if(this.passedOut){
+        return 'passed out';
+      }else{
+        return 'fine';
+      }
+    }else{
+      return 'dead';
     }
   }
 }
