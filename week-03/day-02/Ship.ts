@@ -1,22 +1,32 @@
 'use strict';
 
-import {Pirate} from './Pirate'
+import { Pirate } from './Pirate'
 
 class Ship {
-crew: Pirate[] = [];
-captain: Pirate;
-shipCapacity: number = 100;
+  crew: Pirate[] = [];
+  captain: Pirate;
+  shipCapacity: number = 100;
 
-fillShip(){
-  this.captain = new Pirate();
-  for(let i: number = 0; i < Math.floor(Math.random()*this.shipCapacity); i++)
-  this.crew.push(new Pirate());
-}
-getInfo(){
-  console.log('Ship crew: ' + this.crew.length + '\n' + 
-  'Bottles of rum the captain drank: ' + this.captain.rumCounter + '\n' + 
-  'He is currently ')
-}
+  fillShip() {
+    this.captain = new Pirate();
+    for (let i: number = 0; i < Math.floor(Math.random() * this.shipCapacity); i++)
+      this.crew.push(new Pirate());
+  }
+  getInfo() {
+    console.log('Ship crew: ' + this.crew.length + 'seadogs and a captain \n' +
+      'From these ' + this.crewAlive() + ' are alive \n' +
+      'Bottles of rum the captain drank: ' + this.captain.rumCounter + '\n' +
+      'He is currently ' + this.captain.getState());
+  }
+  crewAlive() {
+    let aliveCounter = 0;
+    for (let i: number = 0; i < this.crew.length; i++) {
+      if (this.crew[i].alive) {
+        aliveCounter++;
+      }
+    }
+    return aliveCounter;
+  }
 }
 
 // Create a Ship class.
@@ -34,4 +44,8 @@ getInfo(){
 // The loser crew has a random number of losses (deaths).
 // The winner captain and crew has a party, including a random number of rum :)
 
-export {Ship}
+let blackPearl: Ship = new Ship;
+blackPearl.fillShip();
+blackPearl.getInfo();
+
+export { Ship }
