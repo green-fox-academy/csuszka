@@ -17,9 +17,9 @@ class FleetOfThings {
   }
 
   print() {
-    let thingsArray = this.fleet.getThings();
+    let thingsArray: Thing[] = this.fleet.getThings();
     for (let i: number = 0; i < thingsArray.length; i++) {
-      if (thingsArray[i].getCompleted() == true) {
+      if (thingsArray[i].getCompleted()) {
         console.log('[x] ' + thingsArray[i].getName());
       } else {
         console.log('[ ] ' + thingsArray[i].getName());
@@ -37,7 +37,6 @@ fleetOfToDo.fleet.getThings()[2].complete();
 fleetOfToDo.fleet.add(new Thing('Eat lunch'));
 fleetOfToDo.fleet.getThings()[3].complete();
 fleetOfToDo.print();
-
 
 // -  You have the `Thing` class
 // -  You have the `Fleet` class
