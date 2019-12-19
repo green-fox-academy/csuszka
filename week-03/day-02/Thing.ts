@@ -6,6 +6,7 @@ class Thing {
 
   constructor(name: string) {
     this.name = name;
+    this.completed  = false;
   }
 
   public complete(): void {
