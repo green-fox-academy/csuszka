@@ -18,3 +18,5 @@ function purpleSteps(patternNumber: number, fillColor: string, strokeColor: stri
 }
 
 purpleSteps(10, 'purple', 'black');
+
+export {};

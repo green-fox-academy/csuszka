@@ -21,3 +21,5 @@ function purpleSteps(startPosX: number, startPosY: number, startSideLength: numb
 }
 
 purpleSteps(5, 5, 5, 1, 'purple', 'black');
+
+export{};

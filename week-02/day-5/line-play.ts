@@ -25,3 +25,5 @@ function drawNet(distance: number, color1: string, color2: string, canvasSize): 
   }
 }
 drawNet(100, 'green', 'purple', 500);
+
+export {};
