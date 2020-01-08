@@ -4,7 +4,7 @@ import { Instrument } from './Instrument';
 
 export abstract class StringedInstrument extends Instrument {
   protected numberOfStrings: number;
-  constructor(name: string, numberOfStrings: number = 6) {
+  constructor(name: string, numberOfStrings: number = 96) {
     super(name);
     this.numberOfStrings = numberOfStrings;
   }
