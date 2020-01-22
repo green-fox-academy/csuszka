@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 10% 0 10%;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    background: aqua;
+}
+
+.main-container {
+    display: flex;
+    list-style: none;
+    height: 500px;
+}
+
+.main {
+    background: red;
+    position: relative;
+    flex: 2;
+    margin: 0 10px 0 10px;
+}
+
+.aside-left {
+    background: orange;
+    flex: 1;
+}
+
+.aside-right {
+    background: purple;
+    flex: 1;
+}
+
+.box {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+}
+
+.footer {
+    display: flex;
+    background: blue;
+    height: 100px;
+}
