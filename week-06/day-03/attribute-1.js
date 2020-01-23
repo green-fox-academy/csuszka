@@ -9,8 +9,3 @@ document.querySelector('a').setAttribute('href', 'https://www.greenfoxacademy.co
 
 document.querySelector('.this-one').toggleAttribute('disabled');
 document.querySelector('.this-one').innerText = 'Don\'t click me';
-
-for (...) {
-  assasddgfghghhh
-  dkfjhgdskfhgdsklfghd
-}

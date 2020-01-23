@@ -1,0 +1,27 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  padding: 20%;
+}
+
+.details-icon{
+
+}
+
+.details-message{
+
+
+}
+
+.details-temp{
+
+}
+
+.details-ul{
+  display: flex;
+  background: grey;
+  min-height: 200px;
+}

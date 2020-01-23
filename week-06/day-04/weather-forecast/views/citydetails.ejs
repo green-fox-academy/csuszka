@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+  <main>
+    <ul class="details-ul">
+      <% for (let i = 0; i < forecasts.length; i++){ %>
+        <li class="details-ul">
+          <icon class = "details-icon">
+            <%= forecasts[i].weather[0].icon %>
+          </icon>
+          <temperature class="details-temp">
+            <%= forecasts[i].weather[0].temp %>
+          </temperature>
+          <message class="details-message">
+            <%= forecasts[i].weather[0].message %>
+          </message>
+        </li>
+      <% } %>
+    </ul>
+  </main>
+
+</body>
+
+</html>

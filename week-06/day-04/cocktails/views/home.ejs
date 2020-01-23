@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title><%= "Welcome back, " + name + "!" %></title>
+</head>
+
+<body>
+  <h1><%= "Welcome back, " + name + "!" %></h1>
+
+  <p>Cocktails:</p>
+  <ul>
+    <% for (let i = 0; i < cocktailList.length; i++){ %>
+      <li>
+        <%= cocktailList[i] %>
+      </li>
+      <% } %>
+  </ul>
+</body>
+
+</html>

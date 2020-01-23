@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+  <main>
+    <ul class = "dash-ul">
+    <% for (let i = 0; i < forecasts.length; i++){ %>
+      <a href = "/cities/<%= forecasts[i].city %>" >
+    
+      <li>
+        <div class = "dash-left">
+          <city class = "dash-city">
+            <%= forecasts[i].city %>
+          </city>
+          <state class = "dash-state">
+            <%= forecasts[i].location %>
+          </state>
+        </div>
+<div class = "dash-right">
+  <temperature class = "dash-temperature">
+    <%= forecasts[i].weather[0].temp %> 
+  </temperature>
+  <icon class = "dash-icon">
+    <%= forecasts[i].weather[0].icon %> 
+  </icon>
+</div>
+      </li>
+    </a>
+      <% } %>
+  </ul>
+  </main>
+
+</body>
+
+</html>
