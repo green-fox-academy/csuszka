@@ -3,10 +3,9 @@
 const express = require('express');
 const app = express();
 const path = require('path'); // problems stemming from windows and linux path diffrences will not exist anymore
-const bodyParser = require('body-parser');
 
 app.use(express.static('assets'));
-app.use(express.json());
+app.use(express.json()); // to be able to parse the body
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html')); // path ^
