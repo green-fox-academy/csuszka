@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>List of our books</title>
+</head>
+
+<body>
+  <main>
+    <% for(let i = 0; i < rows.length; i++){ %>
+    <ul>
+      <li>
+        Title: <%= rows[i].book_name %>
+      </li>
+      <li>
+        Written by: <%= rows[i].aut_name %>
+      </li>
+      <li>
+        Category: <%= rows[i].cate_descrip %>
+      </li>
+      <li>
+        Published by: <%= rows[i].pub_name %>
+      </li>
+      <li>
+        Price: <%= rows[i].book_price %>
+      </li>
+    </ul>
+    <% } %>
+  </main>
+</body>
+
+</html>
