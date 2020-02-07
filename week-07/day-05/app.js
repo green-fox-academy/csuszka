@@ -18,7 +18,7 @@ conn.connect((err) => {
     console.error('Cannot connect to the database', err);
     return;
   }
-  console.log('Connection established'); //don't close the connection
+  console.log('Connection established'); //don't close the connection!
 });
 
 app.get('/hello', (req, res) => {

@@ -1,5 +1,29 @@
 *{
   margin: 0;
   padding: 0;
-  
+  color: white;
+  font-size: 30px;
+}
+
+.container{
+  background: rgb(132, 88, 150);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: minmax(250px, auto);
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.left{
+background: rgb(231, 200, 62);
+
+}
+
+.middle{
+background: rgb(87, 177, 46);
+}
+
+.right{
+  background: rgb(231, 200, 62);
 }

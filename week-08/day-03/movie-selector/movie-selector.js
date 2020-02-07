@@ -19,10 +19,10 @@ let movieList = [
 movieList.forEach(e=> {
   let genreList = [];
   if(genreList.)
-})
+});
+
 genreSelector.appendChild()
 genreSelector.addEventListener('change', (e) => {
-
     if (e.target.value !== movies[i].className && movies[i].className !== "") {
       movies[i].className = movies[i].className + " hidden";
     }
