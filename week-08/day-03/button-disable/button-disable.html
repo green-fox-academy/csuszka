@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>login form</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="button-disable.css" />
+  </head>
+  <body>
+
+    <form action="" method="POST" id="radio">
+      <p>What is your favourite pet?</p>
+      <div>
+        <label for="dog">Dog
+          <input type="radio" id="dog" name="favouriteAnimal" value="dog">
+        </label>
+        <label for="cat">Cat
+          <input type="radio" id="cat" name="favouriteAnimal" value="cat">
+        </label>
+        <label for="goldfish">Victor the goldfish
+          <input type="radio" id="goldfish" name="favouriteAnimal" value="goldfish">
+        </label>
+      </div>
+      <p>Do you want to sign up to cat facts?</p>
+      <div>
+        <label for="yes">Yes
+          <input type="radio" id="yes" name="catFacts" value="yes">
+        </label>
+        <label for="no">No
+          <input type="radio" id="no" name="catFacts" value="no">
+        </label>
+      </div>
+      <button type="submit" id = "loveCatsButton" disabled>I love cats</button>
+      <button type="submit" id = "signUpButton" disabled>Sign up</button>
+    </form>
+
+  </body>
+  <script src="button-disable.js"></script>
+</html>
