@@ -1,0 +1,42 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+th, td{
+  border: 2px solid rgb(160, 160, 160);
+  padding: 15px;
+  color: darkgray;
+}
+
+body{
+  background: rgb(52, 116, 253);
+}
+
+table{
+  width: 600px;
+  border-collapse: collapse;
+  background-color: lightgray;
+  margin: auto;
+}
+
+th{
+  background: rgb(34, 34, 34);
+  box-shadow: 0px 3px 0px 0px rgb(160, 160, 160);
+  color: white;
+  font-size: 36px;
+  text-align: left;
+}
+
+tr:nth-child(2n){
+  background: white;
+}
+
+*[data-currency="USD"]:before{
+content:"$ "
+}
+
+*[data-currency="USD"]:after{
+  content:".00"
+  }
