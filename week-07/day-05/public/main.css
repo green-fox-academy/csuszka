@@ -1,0 +1,49 @@
+body{
+  font-family: 'Lato', sans-serif;
+  background: rgb(216, 216, 216);
+}
+
+.header{
+  background: url(./milky-way.jpg) no-repeat;
+  background-size: cover;
+  height: 200px;
+  overflow: hidden;
+  color: white;
+  font-size: 42px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.header a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 25px;
+}
+
+.body-container{
+  display: flex;
+}
+
+.main{
+  flex: 1;
+  background: white;
+  margin-top: 10px;
+  min-height: 200px; /* for testing */
+}
+
+.aside{
+  width: 300px;
+  margin: 10px 0 0 10px;
+}
+
+.sidebar-title{
+  display: block;
+  height: 30px;
+  background: #4aa3df;
+}
+
+.sidebar-content{
+  background: white;
+  margin-top: 10px;
+  min-height: 200px; /* for testing */
+}
