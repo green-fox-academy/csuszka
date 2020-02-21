@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labeled Button</title>
+  <link rel="stylesheet" type="text/css" href="label.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <i class="fa fa-trash-alt"></i>
+  <button>
+    sfadfaerfagar
+  </button>
+  <button>
+    <i data-action="delete" class="far fa-trash-alt"></i>
+  </button>
+  <button>
+    <i data-action="confirm" class="far fa-trash-alt"></i>
+  </button>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Labeled Buttons</title>
+  <style>
+ul {
+  list-style: outside none none;
+  margin: 20px 20px;
+  padding: 0;
+  width: 48px;
+}
+a {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+i {
+}
+span {
+  color: #FFFFFF;
+  font-size:14px;
+  bottom: 0;
+  left: 40px;
+  line-height: 38px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0;
+  -webkit-transition: 0.50s;
+}
+a:hover span {
+  width: auto;
+  padding:0 30px;
+  overflow:visible;
+}
+.container {
+  background-color: #313841;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  margin: 50px auto 0 auto;
+  width: 700px;
+}
+/*
+.fa-trash-o {
+  color: #C13E3C;
+} */
+.fa-check {
+  color: #329C6D;
+}
+.delete {
+  background-color: #C13E3C;
+}
+.sure {
+  background-color: #38BA7D;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li>
+        <i class="fa fa-trash-o" aria-hidden="true"></i><span>Delete</span>
+      </li>
+      <li>
+      <a class="link"><i class="fa fa-trash-o"></i><span class="delete">Delete</span></a>
+      </li>
+      <li>
+      <a class="link"><i class="fa fa-check"></i><span class="sure">Sure?</span></a>
+      </li>
+    </ul>
+  </div>
+
+  <i class="fa fa-trash-alt"></i>
+  <div>
+    <i class="fa fa-trash-o"></i> sfadfaerfagar
+  </div>
+  <button>
+    <i data-action="delete" class="far fa-trash-alt"></i>
+  </button>
+  <button>
+    <i data-action="confirm" class="far fa-trash-alt"></i>
+  </button>
+
+  <script src=""></script>
+</body>
+</html>
