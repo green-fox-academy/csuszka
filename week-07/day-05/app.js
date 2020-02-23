@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 app.use(express.json());
+app.use(express.static('public'));
 const PORT = 3000;
 const mysql = require('mysql');
 const conn = mysql.createConnection({
@@ -25,6 +26,10 @@ app.get('/hello', (req, res) => {
   res.send('Hello World');
 });
 
+app.get('/', (req, res) => {
+  res.send('index.html');
+});
+
 app.get('/posts', (req, res) => {
   res.set('Content-Type', 'application/json');
   conn.query('SELECT * FROM posts;', (err, rows) => {
@@ -39,7 +44,9 @@ app.get('/posts', (req, res) => {
 app.post('/posts', (req, res) => {
   let title = req.body.title;
   let url = req.body.url;
-  conn.query(`INSERT INTO posts (title, url) VALUES (?, ?)`, [title, url], (err, rows) => {
+  let owner = 'Maunika'
+  let timestamp = Date.now();
+  conn.query(`INSERT INTO posts (title, url, timestamp, owner) VALUES (?, ?, ?, ?)`, [title, url, timestamp, owner], (err, rows) => {
     if (err) {
       res.send(err);
     } else {

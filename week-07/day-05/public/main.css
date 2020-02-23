@@ -9,15 +9,18 @@ body{
   height: 200px;
   overflow: hidden;
   color: white;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 300;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header a{
   color: white;
   text-decoration: none;
-  letter-spacing: 25px;
+  letter-spacing: 50px;
 }
 
 .body-container{
@@ -37,9 +40,16 @@ body{
 }
 
 .sidebar-title{
-  display: block;
   height: 30px;
   background: #4aa3df;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-title p{
 }
 
 .sidebar-content{
