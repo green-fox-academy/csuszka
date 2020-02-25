@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body{
   font-family: 'Lato', sans-serif;
   background: rgb(216, 216, 216);
@@ -29,9 +34,10 @@ body{
 
 .main{
   flex: 1;
-  background: white;
+  display: flex;
+  flex-direction: column;
   margin-top: 10px;
-  min-height: 200px; /* for testing */
+  color: gray;
 }
 
 .aside{
@@ -49,11 +55,53 @@ body{
   align-items: center;
 }
 
-.sidebar-title p{
-}
-
 .sidebar-content{
   background: white;
   margin-top: 10px;
   min-height: 200px; /* for testing */
 }
+
+.post-container{
+  margin: 5px 5px 5px 5px;
+  display: flex;
+  background: white;
+}
+
+.post-position-box{
+  align-self: center;
+  padding: 10px;
+  font-size: x-large;
+}
+
+.vote-container-box{
+  align-self: center;
+  min-width: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.content-container-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+  padding: 0 0 0 10px;
+}
+
+.content-container-box a {
+  text-decoration: none;
+  font-size: larger;
+}
+
+.title-box {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.post-info-box{
+  flex: 1;
+}
+

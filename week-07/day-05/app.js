@@ -31,8 +31,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/posts', (req, res) => {
-  res.set('Content-Type', 'application/json');
-  conn.query('SELECT * FROM posts;', (err, rows) => {
+ req.headers['Content-Type', 'application/json'];
+  // res.set('Content-Type', 'application/json'); eleve jsonként küldöm, Maunika
+  conn.query('SELECT * FROM posts ORDER BY post_id DESC LIMIT 10;', (err, rows) => {
     if (err) {
       res.send(err);
     } else {
@@ -70,8 +71,8 @@ function creatingJSON(rows) {
     }
     returningJSON.posts.push(objectToPush)
   });
-  console.log(returningJSON);
+ // console.log(returningJSON);
   return returningJSON;
 }
 
-app.listen(PORT, () => `App listening on ${PORT}`);
+app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
