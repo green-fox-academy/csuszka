@@ -105,3 +105,14 @@ body{
   flex: 1;
 }
 
+.form{
+  background: white;
+  min-height: 500px;
+}
+
+.form > * {
+  display: block;
+  height: 25px;
+  font-size: larger;
+  margin: 10px;
+}

@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/posts', (req, res) => {
- req.headers['Content-Type', 'application/json'];
+  req.headers['Content-Type', 'application/json'];
   // res.set('Content-Type', 'application/json'); eleve jsonként küldöm, Maunika
   conn.query('SELECT * FROM posts ORDER BY post_id DESC LIMIT 10;', (err, rows) => {
     if (err) {
@@ -45,7 +45,7 @@ app.get('/posts', (req, res) => {
 app.post('/posts', (req, res) => {
   let title = req.body.title;
   let url = req.body.url;
-  let owner = 'Maunika'
+  let owner = req.body.owner;
   let timestamp = Date.now();
   conn.query(`INSERT INTO posts (title, url, timestamp, owner) VALUES (?, ?, ?, ?)`, [title, url, timestamp, owner], (err, rows) => {
     if (err) {
@@ -62,6 +62,34 @@ app.post('/posts', (req, res) => {
   });
 });
 
+app.put('/posts/:id/upvote', (req, res) => {
+  let post_id = req.params.id;
+  res.setHeader('Content-Type', 'application/json');
+  conn.query(`UPDATE posts SET score = score + 1, vote = vote + 1 WHERE post_id = ?;`, [post_id], (err, rows) => {
+    if (err) {
+      res.status(500).send('Database error');
+    } else {
+      conn.query(`SELECT * FROM posts WHERE post_id = ?;`, [post_id], (err, rows) => {
+        res.status(200).send(rows);
+      })
+    }
+  })
+});
+
+app.put('/posts/:id/downvote', (req, res) => {
+  let post_id = req.params.id;
+  res.setHeader('Content-Type', 'application/json');
+  conn.query(`UPDATE posts SET score = score - 1, vote = vote + 1 WHERE post_id = ?;`, [post_id], (err, rows) => {
+    if (err) {
+      res.status(500).send('Database error');
+    } else {
+      conn.query(`SELECT * FROM posts WHERE post_id = ?;`, [post_id], (err, rows) => {
+        res.status(200).send(rows);
+      })
+    }
+  })
+});
+
 function creatingJSON(rows) {
   let returningJSON = { posts: [] };
   rows.forEach(element => {
@@ -71,7 +99,7 @@ function creatingJSON(rows) {
     }
     returningJSON.posts.push(objectToPush)
   });
- // console.log(returningJSON);
+  // console.log(returningJSON);
   return returningJSON;
 }
 
