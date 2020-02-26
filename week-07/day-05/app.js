@@ -53,7 +53,7 @@ app.post('/posts', (req, res) => {
     } else {
       conn.query(`SELECT * FROM posts ORDER BY post_id DESC LIMIT 0, 1`, (err, rows) => {
         if (err) {
-          res.send(err);
+          res.send('Database error');
         } else {
           res.status(200).send(creatingJSON(rows));
         }

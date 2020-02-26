@@ -53,6 +53,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer; /*will put the cursor of links instead of txt cursor*/
 }
 
 .sidebar-content{
@@ -115,4 +116,7 @@ body{
   height: 25px;
   font-size: larger;
   margin: 10px;
+}
+
+.audio-controller {
 }
