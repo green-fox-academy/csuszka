@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+main{
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  display: flex;
+  max-width: 800px;
+  min-width: 500px;
+  min-height: 400px;
+  margin: 10% auto;
+  background:lightgray;
+}
+
+.main-data-container{
+  display:flex;
+  flex: 1;
+}
+
+.album-header{
+  display: flex;
+}
+
+.playlist-navigator{
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-navigator-row{
+  display:flex;
+}
+
+.fox-logo{
+  width:80px;
+  height:80px;
+  background: url(./img/foxplayer.png) center;
+  background-size: cover;
+
+} .album-logo{
+  width:100px;
+  height:100px;
+  background: url(./img/music-placeholder.png) center;
+  background-size: cover;
+}
+
+.songs{
+  display: flex;
+  flex: 1;
+}
